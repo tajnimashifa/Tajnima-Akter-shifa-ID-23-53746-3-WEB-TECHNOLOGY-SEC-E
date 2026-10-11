@@ -1,0 +1,53 @@
+//A university wants to develop a simple Student Information System using JavaScript. Write a JavaScript program that asks the user to enter a student's name, age, CGPA, student status, and grade, stores the information using appropriate variables and data types, and displays the entered information. The program should also store three course names Web Technology, OOP, and Database in an array and display them using a loop. The program should ask the user to enter marks and determine the student's grade based on the following conditions: marks = 80 as A+, marks = 70 as A, marks = 60 as B, and otherwise F. Create a function named showStudent() that receives the student's name and age as parameters and displays them. Finally, create an array to store the names of three students using user input and display all the student names using a loop.
+
+let name = prompt("enter student name :");
+let age = parseInt(prompt("enter student age : "));
+let cgpa = parseFloat(prompt("Enter student cgpa : "));
+let student_status = (prompt("are you student ? (true/false)") === "true");
+let grade = prompt("enter your grade (A/B/C):").charAt(0);
+
+console.log("student information: ");
+console.log("name "+name);
+console.log("cgpa "+cgpa);
+console.log("student status "+student_status);
+console.log("grade "+grade);
+
+let course = [ "web technology" , "oop" ,"database"];
+
+console.log("course names :");
+
+for(let i=0; i<course.length; i++){
+  console.log(course[i]);
+}
+
+let marks = parseInt(prompt("enter student marks : "));
+
+if(marks >=80){
+  console.log("grade; A+");
+}
+else if(marks >=70){
+  console.log("grade: A");
+}
+else if ( marks>=60){
+  console.log("grade: B");
+}
+else if ( marks<60){
+  console.log("grade: F");
+}
+
+function showstudent(name, age){
+  console.log("student name "+ name);
+  console.log("student age "+age);
+}
+showstudent(name , age);
+
+
+let student =[];
+for (let i=0; i<3; i++){
+  student[i] = prompt("enter student name  ;");
+}
+
+console.log("student name : ");
+for(let i=0; i<student.length; i++){
+  console.log(student[i]);
+}
