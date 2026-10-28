@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second Page</title>
+</head>
+<body>
+
+<h2>User Information</h2>
+
+<p><strong>Username:</strong> <span id="u"></span></p>
+<p><strong>Password:</strong> <span id="p"></span></p>
+
+<script>
+document.getElementById("u").textContent =
+sessionStorage.getItem("username");
+
+document.getElementById("p").textContent =
+sessionStorage.getItem("password");
+</script>
+
+</body>
+</html>
